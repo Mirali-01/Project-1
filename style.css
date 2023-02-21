@@ -1,0 +1,26 @@
+.topScreen{
+    border: ridge;
+    height: 50vh;
+    width: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stickFigureBox{
+    border: ridge;
+    height: 40vh;
+    width: 45vh;
+}
+
+.alphabetBox{
+    border: ridge;
+    height: 40vh;
+    width: 45vh;
+}
+
+.bottomScreen{
+    border: ridge;
+    height: 20vh;
+    width: 60vh;
+    margin: auto;
+}

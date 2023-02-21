@@ -1,15 +1,18 @@
-//
+// Word Guesser
 
 // Logic Wireframe
 // 1. make alphabet box
 // 2. make input for chosen word (either player can make up a word)
-// 2.1 inputted word should generate empty lines below alphabet box indicating the length of the word
-// 3. select letter from alphabet box to appear below box and removed from alphabet box, for either right or wrong
-// 4. if correct letter then show below
-// 5. if incorrect letter hangman features are generated, up to 6 features
+// 2.1 inputted word should generate blank lines below alphabet box indicating the length of the word
+// 3. select letter from alphabet box to be removed, for either right or wrong
+// 4. if correct letter, then show below on blank lines
+// 5. if incorrect letter, then hangman features are generated, up to 6 features
 // 6. You win if you guess the word correctly
 // 7. You lose if hangman has all features
 // 8. Round ends and next player can input a word
+
+// special feature: Can guess the word ONCE, without selecting any letters
+// if correct you win, if incorrect you lose instantly
 
 // alphabet
 
