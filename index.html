@@ -6,22 +6,56 @@
     <title>Word Guesser</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="" />
   </head>
-  <div class="topScreen">
-    <div class="stickFigureBox">
-      <img src="" alt="" class="stickFigure" />
-    </div>
-    <div class="alphabetBox">
-      <div class="alphabet"></div>
-    </div>
-  </div>
-
-  <div class="bottomScreen">
-    <div class="blankSpaces"></div>
-  </div>
   <body>
+    <h1 class="title">Word Guesser</h1>
+
+    <div class="topScreen">
+      <div class="stickFigureBox">
+        <!-- 6 stick figure divs-->
+      </div>
+      <div class="alphabetBox">
+        <div class="alphabet">
+          <button class="letter">A</button>
+          <button class="letter">B</button>
+          <button class="letter">C</button>
+          <button class="letter">D</button>
+          <button class="letter">E</button>
+          <button class="letter">F</button>
+          <button class="letter">G</button>
+          <button class="letter">H</button>
+          <button class="letter">I</button>
+          <button class="letter">J</button>
+          <button class="letter">K</button>
+          <button class="letter">L</button>
+          <button class="letter">M</button>
+          <button class="letter">N</button>
+          <button class="letter">O</button>
+          <button class="letter">P</button>
+          <button class="letter">Q</button>
+          <button class="letter">R</button>
+          <button class="letter">S</button>
+          <button class="letter">T</button>
+          <button class="letter">U</button>
+          <button class="letter">V</button>
+          <button class="letter">W</button>
+          <button class="letter">X</button>
+          <button class="letter">Y</button>
+          <button class="letter">Z</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="midScreen">
+      <input type="text">
+      <button class="wordChoice" onclick="chooseWord()" >Input your word</button>
+    </div>
+  
+    <div class="bottomScreen">
+      <div class="blankSpaces"></div>
+    </div>
     <script src="app.js" async defer></script>
   </body>
 </html>
