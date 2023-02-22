@@ -24,7 +24,8 @@
   // counter: word.length
 // alphabet
 
-// const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const alphabet = [];
+// "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
 // console.log(alphabet);
 
 // // generate hangman with each incorrect answer
@@ -39,7 +40,8 @@ const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
 const letters = document.querySelector(".letter")
-console.log(letters.innerHTML)
+console.log(alphabetLetters.textContent)
+
 
 const chooseWord = document.querySelector(".wordChoice")
 const input = document.querySelector("input")
@@ -56,25 +58,35 @@ chooseWord.addEventListener("click", (e) => {
   }
 })
 
+// 3 check if letters in word are in alphabet, this function should go in alphabetLetters event listener
+// let checkWord = () => {
+//   let wordContents = input.value.split("")
+//   let alphabetContents = alphabetLetters.textContent
+//   if (wordContents.includes(alphabetContents)) {
+//     console.log("true")
+//   }
+  
+//   if (letters.innerHTML in wordContents === false) {
+//     let hangmanDiv = document.createElement("div")
+//     hangmanDiv.classList.add("hangmanPiece")
+//     wrongAnswer.append(hangmanDiv)
+//   } 
+// }
+
+
+
 alphabetLetters.addEventListener("click", (e) => {
-  e.target.remove() //target child elements when linked with parent
+  let a = alphabet.unshift(alphabetLetters.textContent)
+  console.log(a)
+  // e.target.style.display = "none" //target child elements when linked with parent
+  // checkWord()
+  // How do I save eventlistener values
 })
 
+// console.log(letters.innerHTML)
 
 // letters.addEventListener("click", (e) => {
-//   letters.remove(e)
+//   letters.remove()
 // })
 
 
-// 3 check if letters in word are in alphabet, this function should go in alphabetLetters event listener
-let checkWord = () => {
-  let wordContents = input.value
-  console.log(wordContents)
-  if (letters.innerHTML in wordContents === false) {
-    let hangmanDiv = document.createElement("div")
-    hangmanDiv.classList.add("hangmanPiece")
-    wrongAnswer.append(hangmanDiv)
-  } 
-}
-
-checkWord()
