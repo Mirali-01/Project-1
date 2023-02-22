@@ -21,6 +21,12 @@
     width: 35vh;
 }
 
+.hangmanPiece {
+    border: ridge black;
+    height: 5vh;
+    width: 30vh;
+}
+
 .alphabetBox {
     border: ridge;
     height: 40vh;

@@ -33,15 +33,18 @@
 
 // inserting player's word
 
+const wrongAnswer = document.querySelector(".stickFigureBox")
 const wordChoice = document.querySelector(".wordChoice")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
-// const letters = document.querySelector(".letter")
+const letters = document.querySelector(".letter")
+console.log(letters.innerHTML)
+
 const chooseWord = document.querySelector(".wordChoice")
+const input = document.querySelector("input")
 
 chooseWord.addEventListener("click", (e) => {
-  let input = document.querySelector("input")
   let wordValue = input.value
   console.log(wordValue)
   for (let i = 0; i < wordValue.length; i++) {
@@ -57,12 +60,21 @@ alphabetLetters.addEventListener("click", (e) => {
   e.target.remove() //target child elements when linked with parent
 })
 
+
 // letters.addEventListener("click", (e) => {
 //   letters.remove(e)
 // })
 
 
-// 3 check if letters in word are in alphabet
-// let check = () => {
-//   if ()
-// }
+// 3 check if letters in word are in alphabet, this function should go in alphabetLetters event listener
+let checkWord = () => {
+  let wordContents = input.value
+  console.log(wordContents)
+  if (letters.innerHTML in wordContents === false) {
+    let hangmanDiv = document.createElement("div")
+    hangmanDiv.classList.add("hangmanPiece")
+    wrongAnswer.append(hangmanDiv)
+  } 
+}
+
+checkWord()
