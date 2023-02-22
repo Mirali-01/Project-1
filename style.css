@@ -27,6 +27,19 @@
     width: 35vh;
 }
 
+/* when space between letters are clicked, all letters are removed */
+
+.alphabet {
+    border: ridge;
+}
+
+.letter {
+    border: solid gray;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 2.5vh;
+}
+
 .midScreen {
     border: ridge;
     height: 5vh;
