@@ -72,3 +72,8 @@
     border-bottom: 1px solid black;
     width: 3vh;
 }
+
+.text {
+    border: ridge;
+    width: 5vh;
+}
