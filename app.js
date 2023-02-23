@@ -24,8 +24,8 @@
   // counter: word.length
 // alphabet
 
-const alphabet = [];
-// "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+// const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
 // console.log(alphabet);
 
 // // generate hangman with each incorrect answer
@@ -39,8 +39,6 @@ const wordChoice = document.querySelector(".wordChoice")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
-const letters = document.querySelector(".letter")
-console.log(alphabetLetters.textContent.toLowerCase())
 
 
 const chooseWord = document.querySelector(".wordChoice")
@@ -59,41 +57,60 @@ chooseWord.addEventListener("click", (e) => {
 })
 
 // 3 check if letters in word are in alphabet, this function should go in alphabetLetters event listener
-// let checkWord = () => {
-//   let wordContents = input.value.split("")
-//   let alphabetContents = alphabetLetters.textContent
-//   if (wordContents.includes(alphabetContents)) {
-//     console.log("true")
-//   } else {
-//     e.target.remove() 
-//   }
+let checkWord = () => {
+  let wordContents = input.value.split("")
+  let alphabetContents = alphabetLetters.textContent
+  if (wordContents.includes(alphabetContents)) {
+    console.log("true")
+  }
   
-//   if (letters.innerHTML in wordContents === false) {
-//     let hangmanDiv = document.createElement("div")
-//     hangmanDiv.classList.add("hangmanPiece")
-//     wrongAnswer.append(hangmanDiv)
-//   } 
+  // if (letters.innerHTML in wordContents === false) {
+  //   let hangmanDiv = document.createElement("div")
+  //   hangmanDiv.classList.add("hangmanPiece")
+  //   wrongAnswer.append(hangmanDiv)
+  // } 
+}
+// using onclick
+// const pleaseFixMyProblem = () => {
+//   const letters = document.querySelectorAll(".letter")
+//   let letterTrash = []
+//   for (let i = 0; i < letters.length; i++) {
+//     letterTrash.push(letters[i].innerHTML)
+//   }
+//   console.log(letterTrash)
 // }
 
 
-
+// using event listener
 alphabetLetters.addEventListener("click", (e) => {
   // e.target.remove() 
+
+  const letters = document.querySelectorAll(".letter")
+  let letterTrash = []
+  for (let i = 0; i < letters.length; i++) {
+    letterTrash.push(letters[i].textContent)
+  }
+  console.log(letterTrash)
+
+  
   //target child elements when linked with parent
   // checkWord()
-  let wordContents = input.value.split("")
-  let alphabetContents = alphabetLetters.textContent.toLowerCase()
-  if (wordContents.includes(alphabetContents)) {
-    console.log("true")
-  } else {
-    e.target.remove() 
-  }
+  // let wordContents = input.value.split("")
+  // let alphabetContents = alphabetLetters.textContent.toLowerCase()
+  // if (wordContents.includes(alphabetContents)) {
+  //   console.log("true")
+  // } else {
+  //   e.target.remove() 
+  // }
 })
 
-// console.log(letters.innerHTML)
-
 // letters.addEventListener("click", (e) => {
-//   letters.remove()
+//   e.target.remove()
 // })
 
 
+// setTimeout(() => {
+//   let someFunction = () => {
+
+//   }
+// }, 1000)
