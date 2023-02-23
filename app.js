@@ -40,7 +40,7 @@ const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
 const letters = document.querySelector(".letter")
-console.log(alphabetLetters.textContent)
+console.log(alphabetLetters.textContent.toLowerCase())
 
 
 const chooseWord = document.querySelector(".wordChoice")
@@ -64,6 +64,8 @@ chooseWord.addEventListener("click", (e) => {
 //   let alphabetContents = alphabetLetters.textContent
 //   if (wordContents.includes(alphabetContents)) {
 //     console.log("true")
+//   } else {
+//     e.target.remove() 
 //   }
   
 //   if (letters.innerHTML in wordContents === false) {
@@ -76,11 +78,16 @@ chooseWord.addEventListener("click", (e) => {
 
 
 alphabetLetters.addEventListener("click", (e) => {
-  let a = alphabet.unshift(alphabetLetters.textContent)
-  console.log(a)
-  // e.target.style.display = "none" //target child elements when linked with parent
+  // e.target.remove() 
+  //target child elements when linked with parent
   // checkWord()
-  // How do I save eventlistener values
+  let wordContents = input.value.split("")
+  let alphabetContents = alphabetLetters.textContent.toLowerCase()
+  if (wordContents.includes(alphabetContents)) {
+    console.log("true")
+  } else {
+    e.target.remove() 
+  }
 })
 
 // console.log(letters.innerHTML)
