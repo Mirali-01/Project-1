@@ -22,7 +22,6 @@ const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P
 
 // query selectors
 const wrongAnswer = document.querySelector(".stickFigureBox")
-const wordChoice = document.querySelector(".wordChoice")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
@@ -34,14 +33,14 @@ const input = document.querySelector("input")
 
 let spaceDivs;
 let spaces;
-let characters;
+let inputCharacters;
 let clickLetter;
 
-// checks the input word and generates blank lines for length of word
+// checks the input word and generates blank lines for length of input word
 chooseWord.addEventListener("click", (e) => {
   let wordValue = input.value
-  characters = wordValue.split("")
-  console.log(characters)
+  inputCharacters = wordValue.split("")
+  console.log(inputCharacters)
   for (let i = 0; i < wordValue.length; i++) {
       // 1. create element
     spaces = document.createElement('div')
@@ -55,23 +54,23 @@ chooseWord.addEventListener("click", (e) => {
   }
 })
 
+// Make concise bodies?
+// ** need a function for similar inputCharacters **
 
-// need a function for similar characters
-
-// 3 check if clicked letter is a letter of the alphabet and is a letter in the index of the input word *
+// checks if clicked letter is a letter of the alphabet and is a letter in the index of the input word *
 const letters = document.querySelectorAll(".letter")
 
 for (let i = 0; i < alphabet.length; i++) {
   letters[i].addEventListener("click", (e) => {
     clickLetter = e.target.textContent.toLowerCase()
 
-// correct answer for non-similar characters
-if (characters.includes(clickLetter)) {
-  console.log(characters.indexOf(clickLetter))
-  spaceDivs[characters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
+// correct answer for non-similar inputCharacters
+if (inputCharacters.includes(clickLetter)) {
+  console.log(inputCharacters.indexOf(clickLetter))
+  spaceDivs[inputCharacters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
 
-  // for (let i = 0; i < characters.length; i++) {
-    // spaceDivs[characters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
+  // for (let i = 0; i < inputCharacters.length; i++) {
+    // spaceDivs[inputCharacters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
   // }
   
   }
@@ -96,7 +95,7 @@ if (characters.includes(clickLetter)) {
 
 
 
-
+// extra stuff that I might use later
 // setTimeout(() => {
 //   let someFunction = () => {
 
