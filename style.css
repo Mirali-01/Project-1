@@ -80,9 +80,14 @@
     width: 3vh;
 }
 
-.text {
+.textContainer {
     border: ridge;
     width: 3vh;
     height: 3vh;
     font-size: 20px;
+}
+
+.text {
+    height: 100%;
+    width: 100%;
 }

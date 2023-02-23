@@ -68,8 +68,11 @@ for (let i = 0; i < alphabet.length; i++) {
   letters[i].addEventListener("click", () => {
     if (input.value.split("").includes(alphabet[i].toLowerCase())) {
       // can't i append alphabet[i] or letters[i]
+      let textContainer = document.createElement("div")
+      textContainer.classList.add("textContainer")
       let text = document.createElement("p")
       text.classList.add("text")
+      correctAnswer.append(textContainer)
       correctAnswer.append(text)
     } else {
       // 1. create element
@@ -83,7 +86,6 @@ for (let i = 0; i < alphabet.length; i++) {
     console.log(alphabet[i])
   })
 }
-
 
 // setTimeout(() => {
 //   let someFunction = () => {
