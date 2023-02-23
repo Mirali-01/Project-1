@@ -40,18 +40,26 @@ const alphabetLetters = document.querySelector(".alphabet")
 const chooseWord = document.querySelector(".wordChoice")
 const input = document.querySelector("input")
 
+let spaceDivs;
+
+let spaces;
+let characters;
+let showLetter;
+
 chooseWord.addEventListener("click", (e) => {
   let wordValue = input.value
-  console.log(wordValue)
+  characters = wordValue.split("")
+  console.log(characters)
   for (let i = 0; i < wordValue.length; i++) {
       // 1. create element
-    let spaces = document.createElement('div')
+    spaces = document.createElement('div')
     // spaces.setAttribute("class", "space") adds inline
       // 2. give it a name
     spaces.classList.add("space") //creates an array of classes and adds a name to the array
       // 3. append or apply other methods
     blankSpaces.append(spaces)
     midScreen.remove()
+    spaceDivs = [...document.querySelectorAll(".space")]
   }
 })
 
@@ -64,25 +72,32 @@ const letters = document.querySelectorAll(".letter")
 // })
 
 for (let i = 0; i < alphabet.length; i++) {
-  letters[i].addEventListener("click", () => {
-    if (input.value.split("").includes(alphabet[i].toLowerCase())) {
-      // correct answer
-      // can't i append alphabet[i] or letters[i]
-      let spaces1 = document.createElement('div')
-      spaces1.classList.add("space1")
-      blankSpaces.append(spaces1)
-      spaces1.innerHTML = alphabet[i]
-    } else {
-      // wrong answer
-      // 1. create element
-      let hangPiece = document.createElement("div")
-      // 2. give it a name
-      hangPiece.classList.add("hangPiece")
-      // 3. append or apply other methods
-      wrongAnswer.append(hangPiece)
-    }
-    letters[i].remove()
-    console.log(alphabet[i])
+  letters[i].addEventListener("click", (e) => {
+    showLetter = e.target.textContent.toLowerCase()
+
+
+
+    // let indexArr = []
+// correct answer
+if (characters.includes(showLetter)) {
+  console.log(characters.indexOf(showLetter))
+  // for (let i = 0; i < characters.length; i++) {
+    spaceDivs[characters.indexOf(showLetter)].textContent = showLetter.toUpperCase()
+  // }
+  
+  }
+      
+    // } else {
+    //   // wrong answer
+    //   // 1. create element
+    //   let hangPiece = document.createElement("div")
+    //   // 2. give it a name
+    //   hangPiece.classList.add("hangPiece")
+    //   // 3. append or apply other methods
+    //   wrongAnswer.append(hangPiece)
+    // }
+    // letters[i].remove()
+    // console.log(alphabet[i])
   })
 }
 
