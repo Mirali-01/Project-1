@@ -31,7 +31,6 @@ const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P
 
 const wrongAnswer = document.querySelector(".stickFigureBox")
 const wordChoice = document.querySelector(".wordChoice")
-const correctAnswer = document.querySelector(".letterSpaces")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
@@ -67,14 +66,14 @@ const letters = document.querySelectorAll(".letter")
 for (let i = 0; i < alphabet.length; i++) {
   letters[i].addEventListener("click", () => {
     if (input.value.split("").includes(alphabet[i].toLowerCase())) {
+      // correct answer
       // can't i append alphabet[i] or letters[i]
-      let textContainer = document.createElement("div")
-      textContainer.classList.add("textContainer")
-      let text = document.createElement("p")
-      text.classList.add("text")
-      correctAnswer.append(textContainer)
-      textContainer.append(text)
+      let spaces1 = document.createElement('div')
+      spaces1.classList.add("space1")
+      blankSpaces.append(spaces1)
+      spaces1.innerHTML = alphabet[i]
     } else {
+      // wrong answer
       // 1. create element
       let hangPiece = document.createElement("div")
       // 2. give it a name
