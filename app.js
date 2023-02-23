@@ -73,7 +73,7 @@ for (let i = 0; i < alphabet.length; i++) {
       let text = document.createElement("p")
       text.classList.add("text")
       correctAnswer.append(textContainer)
-      correctAnswer.append(text)
+      textContainer.append(text)
     } else {
       // 1. create element
       let hangPiece = document.createElement("div")
