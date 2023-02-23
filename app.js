@@ -31,6 +31,7 @@ const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P
 
 const wrongAnswer = document.querySelector(".stickFigureBox")
 const wordChoice = document.querySelector(".wordChoice")
+const correctAnswer = document.querySelector(".letterSpaces")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
@@ -69,7 +70,7 @@ for (let i = 0; i < alphabet.length; i++) {
       // can't i append alphabet[i] or letters[i]
       let text = document.createElement("p")
       text.classList.add("text")
-      spaces.append(text)
+      correctAnswer.append(text)
     } else {
       // 1. create element
       let hangPiece = document.createElement("div")
