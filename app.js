@@ -24,7 +24,7 @@
   // counter: word.length
 // alphabet
 
-// const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 // console.log(alphabet);
 
@@ -57,44 +57,27 @@ chooseWord.addEventListener("click", (e) => {
 })
 
 // 3 check if letters in word are in alphabet, this function should go in alphabetLetters event listener
-let checkWord = () => {
-  let wordContents = input.value.split("")
-  let alphabetContents = alphabetLetters.textContent
-  if (wordContents.includes(alphabetContents)) {
-    console.log("true")
-  }
-  
-  // if (letters.innerHTML in wordContents === false) {
-  //   let hangmanDiv = document.createElement("div")
-  //   hangmanDiv.classList.add("hangmanPiece")
-  //   wrongAnswer.append(hangmanDiv)
-  // } 
+
+const letters = document.querySelectorAll(".letter")
+
+// letters.forEach(button => {
+//   button.addEventListener("click", () =>  button.remove())
+// })
+
+for (let i = 0; i < alphabet.length; i++) {
+  letters[i].addEventListener("click", () => {
+    if (input.value.split("").includes(alphabet[i].toLowerCase())) {
+      console.log(true)
+    } else {
+      console.log(false)
+    }
+    letters[i].remove()
+    console.log(alphabet[i])
+  })
 }
-// using onclick
-// const pleaseFixMyProblem = () => {
-//   const letters = document.querySelectorAll(".letter")
-//   let letterTrash = []
-//   for (let i = 0; i < letters.length; i++) {
-//     letterTrash.push(letters[i].innerHTML)
-//   }
-//   console.log(letterTrash)
-// }
-
-
-// using event listener
-alphabetLetters.addEventListener("click", (e) => {
-  // e.target.remove() 
-
-  const letters = document.querySelectorAll(".letter")
-  let letterTrash = []
-  for (let i = 0; i < letters.length; i++) {
-    letterTrash.push(letters[i].textContent)
-  }
-  console.log(letterTrash)
 
   
   //target child elements when linked with parent
-  // checkWord()
   // let wordContents = input.value.split("")
   // let alphabetContents = alphabetLetters.textContent.toLowerCase()
   // if (wordContents.includes(alphabetContents)) {
@@ -102,11 +85,6 @@ alphabetLetters.addEventListener("click", (e) => {
   // } else {
   //   e.target.remove() 
   // }
-})
-
-// letters.addEventListener("click", (e) => {
-//   e.target.remove()
-// })
 
 
 // setTimeout(() => {
