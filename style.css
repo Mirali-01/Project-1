@@ -78,6 +78,7 @@
 .space {
     border-bottom: 1px solid black;
     width: 4vh;
+    text-align: center;
 }
 
 /* .space1 {

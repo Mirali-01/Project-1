@@ -54,45 +54,59 @@ chooseWord.addEventListener("click", (e) => {
   }
 })
 
-// Make concise bodies?
-// ** need a function for similar inputCharacters **
+// Make concise bodies? 
 
 // checks if clicked letter is a letter of the alphabet and is a letter in the index of the input word *
 const letters = document.querySelectorAll(".letter")
 
-for (let i = 0; i < alphabet.length; i++) {
-  letters[i].addEventListener("click", (e) => {
-    clickLetter = e.target.textContent.toLowerCase()
+// const answer  = () => {
+  for (let i = 0; i < alphabet.length; i++) {
+    letters[i].addEventListener("click", (e) => {
+      clickLetter = e.target.textContent.toLowerCase()
+      console.log(clickLetter)
+    
+  // correct answer for non-similar inputCharacters
+  // if (inputCharacters.includes(clickLetter)) {
+  //   // console.log(inputCharacters.indexOf(clickLetter))
+  //   spaceDivs[inputCharacters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
 
-// correct answer for non-similar inputCharacters
-if (inputCharacters.includes(clickLetter)) {
-  console.log(inputCharacters.indexOf(clickLetter))
-  spaceDivs[inputCharacters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
+  for (let i = 0; i < inputCharacters.value.length; i++) {
+  if (inputCharacters.includes(clickLetter)) {
+    // console.log(inputCharacters[i], inputCharacters.indexOf(inputCharacters[i], i))
+    console.log(spaceDivs[inputCharacters.includes(clickLetter)])
+    spaceDivs[inputCharacters.includes(clickLetter)] = clickLetter.toUpperCase()
+    // spaceDivs[i].innerHTML = clickLetter.toUpperCase()
+  } else {
+        // wrong answer function
+        // 1. create element
+        let hangPiece = document.createElement("div")
+        // 2. give it a name
+        hangPiece.classList.add("hangPiece")
+        // 3. append or apply other methods
+        wrongAnswer.append(hangPiece)
+      }
+      letters[i].remove()
+      console.log(alphabet[i])
+    } 
 
+    })
+  }
+// }
+
+
+// ** need a function for similar inputCharacters **
   // for (let i = 0; i < inputCharacters.length; i++) {
     // spaceDivs[inputCharacters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
   // }
-  
-  }
 
-    // } else {
-    //   // wrong answer function
-    //   // 1. create element
-    //   let hangPiece = document.createElement("div")
-    //   // 2. give it a name
-    //   hangPiece.classList.add("hangPiece")
-    //   // 3. append or apply other methods
-    //   wrongAnswer.append(hangPiece)
-    // }
-    // letters[i].remove()
-    // console.log(alphabet[i])
-  })
+
+// Reference for repeating characters in a string
+const word = "happy"
+const chars = word.split("")
+
+for (let i = 0; i < chars.length; i++) {
+  console.log(chars[i], chars.indexOf(chars[i], i))
 }
-
-
-
-
-
 
 
 // extra stuff that I might use later
