@@ -39,14 +39,22 @@ chooseWord.addEventListener("click", (e) => {
 
 // checks if clicked letter is a letter of the alphabet and is a letter in the index of the input word *
 const letters = document.querySelectorAll(".letter")
+let count = 0;
 
 // const answer  = () => {
   for (let i = 0; i < alphabet.length; i++) {
     letters[i].addEventListener("click", (e) => {
       clickLetter = e.target.textContent.toLowerCase()
       console.log(clickLetter)
-    
+
+      // count += i
+      // if (count < 6) {
+      //   letters[i].removeEventListener("click", (e))
+      //   console.log(count)
+      // }
+  
   // incorrect answer function
+  // needs to stop at 6 divs
     if (!inputCharacters.includes(clickLetter)) {
         // wrong answer function
         // 1. create element
@@ -55,9 +63,10 @@ const letters = document.querySelectorAll(".letter")
         hangPiece.classList.add("hangPiece")
         // 3. append or apply other methods
         wrongAnswer.append(hangPiece)
-    }
-
+    } 
+    
   // correct answer function
+  // needs to stop accepting more letters after solved
   for (let i = 0; i < inputCharacters.length; i++) {
     if (inputCharacters[i] === clickLetter) {
     spaceDivs[i].textContent = clickLetter.toUpperCase()
@@ -66,8 +75,6 @@ const letters = document.querySelectorAll(".letter")
       letters[i].remove()
       })
     }
-
-
 // Reference for repeating characters in a string
 // const word = "happy"
 // const chars = word.split("")

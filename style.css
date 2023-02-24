@@ -61,13 +61,6 @@
     margin: auto;
 }
 
-.letterSpaces {
-    height: 8vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 .blankSpaces {
     height: 10vh;
     display: flex;
@@ -80,8 +73,3 @@
     width: 4vh;
     text-align: center;
 }
-
-/* .space1 {
-    border-bottom: 1px solid black;
-    width: 4vh;
-} */
