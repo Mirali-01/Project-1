@@ -46,16 +46,12 @@ let count = 0;
     letters[i].addEventListener("click", (e) => {
       clickLetter = e.target.textContent.toLowerCase()
       console.log(clickLetter)
-
-      // count += i
-      // if (count < 6) {
-      //   letters[i].removeEventListener("click", (e))
-      //   console.log(count)
-      // }
   
   // incorrect answer function
   // needs to stop at 6 divs
-    if (!inputCharacters.includes(clickLetter)) {
+    if (!inputCharacters.includes(clickLetter) && count < 6) {
+        count ++
+        console.log(count)
         // wrong answer function
         // 1. create element
         let hangPiece = document.createElement("div")
@@ -75,6 +71,9 @@ let count = 0;
       letters[i].remove()
       })
     }
+
+
+    
 // Reference for repeating characters in a string
 // const word = "happy"
 // const chars = word.split("")
