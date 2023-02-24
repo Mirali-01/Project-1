@@ -40,6 +40,7 @@ chooseWord.addEventListener("click", (e) => {
 // checks if clicked letter is a letter of the alphabet and is a letter in the index of the input word *
 const letters = document.querySelectorAll(".letter")
 let count = 0;
+let textCount = []
 
 // const answer  = () => {
   for (let i = 0; i < alphabet.length; i++) {
@@ -66,7 +67,13 @@ let count = 0;
   for (let i = 0; i < inputCharacters.length; i++) {
     if (inputCharacters[i] === clickLetter) {
     spaceDivs[i].textContent = clickLetter.toUpperCase()
-    } 
+    textCount.push(spaceDivs[i].textContent)
+    console.log(textCount)
+    console.log(input.value.toUpperCase().split(""))
+      if (textCount === input.value.toUpperCase().split("")) {
+        alert("Yo")
+      }
+    }
       } 
       letters[i].remove()
       })
