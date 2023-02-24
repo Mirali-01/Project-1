@@ -1,22 +1,5 @@
 // Word Guesser
 
-// Logic Wireframe
-// * = done
-// 1. make alphabet box *
-// 1.2. select letter from alphabet box to be removed, for either right or wrong *
-// 2. make input for chosen word (either player can make up a word) *
-// 2.1 inputted word should generate blank lines below alphabet box indicated by the length of the word *
-  // 3 check if letters in word are in alphabet *
-// 4. if correct letter, then show below on blank lines *
-// 5. if incorrect letter, then hangman features are generated, up to 6 features *
-// 6. You win if you guess the word correctly
-// 7. You lose if hangman has all features
-// 8. Round ends and next player can input a word
-
-// special feature: Can guess the word ONCE, without selecting any letters
-// if correct you win, if incorrect you lose instantly
-
-
 // alphabet
 const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -64,7 +47,7 @@ const letters = document.querySelectorAll(".letter")
       console.log(clickLetter)
     
   // incorrect answer function
-  if (!inputCharacters.includes(clickLetter)) {
+    if (!inputCharacters.includes(clickLetter)) {
         // wrong answer function
         // 1. create element
         let hangPiece = document.createElement("div")
@@ -72,18 +55,17 @@ const letters = document.querySelectorAll(".letter")
         hangPiece.classList.add("hangPiece")
         // 3. append or apply other methods
         wrongAnswer.append(hangPiece)
-  }
+    }
 
   // correct answer function
   for (let i = 0; i < inputCharacters.length; i++) {
-  if (inputCharacters[i] === clickLetter) {
-    // spaceDivs[inputCharacters.indexOf(clickLetter)].textContent = clickLetter.toUpperCase()
+    if (inputCharacters[i] === clickLetter) {
     spaceDivs[i].textContent = clickLetter.toUpperCase()
-  } 
     } 
+      } 
       letters[i].remove()
-    })
-  }
+      })
+    }
 
 
 // Reference for repeating characters in a string
