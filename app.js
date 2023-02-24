@@ -1,5 +1,6 @@
 // Word Guesser
 
+// default on all games
 let gameOn = true
 
 // alphabet
@@ -69,7 +70,6 @@ let textCount = []
           // stop the game
         }
     } 
-
     
   // correct answer function
   // needs to stop accepting more letters after solved
@@ -88,7 +88,6 @@ let textCount = []
       } 
       letters[i].remove()
   }
-
       })
     }
 
@@ -113,3 +112,5 @@ let textCount = []
 // letters.forEach(button => {
 //   button.addEventListener("click", () =>  button.remove())
 // })
+
+// use .reload() on reset button on event listener
