@@ -60,6 +60,9 @@ let textCount = []
         hangPiece.classList.add("hangPiece")
         // 3. append or apply other methods
         wrongAnswer.append(hangPiece)
+        if (count === 6) {
+          alert("You lose!")
+        }
     } 
     
   // correct answer function
@@ -69,9 +72,9 @@ let textCount = []
     spaceDivs[i].textContent = clickLetter.toUpperCase()
     textCount.push(spaceDivs[i].textContent)
     console.log(textCount.length)
-    console.log(input.value.toUpperCase().length)
+    console.log(input.value.length)
       if (textCount.length === input.value.length) {
-        alert("You win")
+        alert("You win!")
       }
     }
       } 
