@@ -1,5 +1,7 @@
 // Word Guesser
 
+let gameOn = true
+
 // alphabet
 const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -47,7 +49,8 @@ let textCount = []
     letters[i].addEventListener("click", (e) => {
       clickLetter = e.target.textContent.toLowerCase()
       console.log(clickLetter)
-  
+      
+    if (gameOn)  {
   // incorrect answer function
   // needs to stop at 6 divs
     if (!inputCharacters.includes(clickLetter) && count < 6) {
@@ -61,9 +64,12 @@ let textCount = []
         // 3. append or apply other methods
         wrongAnswer.append(hangPiece)
         if (count === 6) {
+          gameOn = false
           alert("You lose!")
+          // stop the game
         }
     } 
+
     
   // correct answer function
   // needs to stop accepting more letters after solved
@@ -74,11 +80,15 @@ let textCount = []
     console.log(textCount.length)
     console.log(input.value.length)
       if (textCount.length === input.value.length) {
+        gameOn = false
         alert("You win!")
+        // stop the game
       }
     }
       } 
       letters[i].remove()
+  }
+
       })
     }
 
