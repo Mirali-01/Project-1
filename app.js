@@ -68,10 +68,10 @@ let textCount = []
     if (inputCharacters[i] === clickLetter) {
     spaceDivs[i].textContent = clickLetter.toUpperCase()
     textCount.push(spaceDivs[i].textContent)
-    console.log(textCount)
-    console.log(input.value.toUpperCase().split(""))
-      if (textCount === input.value.toUpperCase().split("")) {
-        alert("Yo")
+    console.log(textCount.length)
+    console.log(input.value.toUpperCase().length)
+      if (textCount.length === input.value.length) {
+        alert("You win")
       }
     }
       } 
