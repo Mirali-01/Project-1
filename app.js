@@ -41,23 +41,24 @@ chooseWord.addEventListener("click", (e) => {
 })
 
 // checks if clicked letter is a letter of the alphabet and is a letter in the index of the input word *
-const letters = document.querySelectorAll(".letter")
-let count = 0;
-let textCount = []
+const button = document.querySelectorAll(".letter")
+let count = 0; //counting divs
+let textCount = [] //pushing char of input word
 
-// const answer  = () => {
+
   for (let i = 0; i < alphabet.length; i++) {
-    letters[i].addEventListener("click", (e) => {
+    console.log(button[i]) //HTML element
+    console.log(button[i].textContent) //text in HTML element
+    button[i].addEventListener("click", (e) => {
       clickLetter = e.target.textContent.toLowerCase()
       console.log(clickLetter)
       
     if (gameOn)  {
-  // incorrect answer function
+  // wrong answer function
   // needs to stop at 6 divs
     if (!inputCharacters.includes(clickLetter) && count < 6) {
         count ++
         console.log(count)
-        // wrong answer function
         // 1. create element
         let hangPiece = document.createElement("div")
         // 2. give it a name
@@ -86,7 +87,7 @@ let textCount = []
       }
     }
       } 
-      letters[i].remove()
+      button[i].remove()
   }
       })
     }
