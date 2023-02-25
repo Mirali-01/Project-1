@@ -1,5 +1,10 @@
+body {
+    margin: 0;
+    background-color: cadetblue;
+}
+
 .gameContainer {
-    border: solid firebrick;
+    /* border: solid firebrick; */
     height: 100vh;
     width: 100vh;
     /* background-image: url("https://i1.pickpik.com/photos/184/716/976/chalkboard-slate-green-blackboard-preview.jpg"); */
@@ -7,6 +12,7 @@
     background-size: cover;
     background-position: center;
     margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .title {
@@ -18,11 +24,13 @@
     text-align: center;
     font-size: 50px;
     margin-top: 3.5vh;
+    color: whitesmoke;
+    text-decoration: underline;
 }
 
 .topScreen {
-    border: ridge purple;
-    height: 50vh;
+    /* border: ridge purple; */
+    height: 47vh;
     width: 80vh;
     display: flex;
     justify-content: space-evenly;
@@ -31,28 +39,28 @@
 }
 
 .stickFigureBox {
-    border: ridge;
-    height: 40vh;
+    border: 3px solid whitesmoke;
+    height: 45vh;
+    width: 39vh;
+}
+
+.alphabetBox {
+    /* border: ridge; */
+    height: 45vh;
     width: 39vh;
 }
 
 .hangPiece {
     border: solid white;
-    height: 5vh;
+    background-color: cadetblue;
+    height: 6.4vh;
     /* width: 30vh; */
     margin: 2px;
+    margin-top: 0.5vh;
 }
-
-.alphabetBox {
-    border: ridge;
-    height: 40vh;
-    width: 39vh;
-}
-
-/* when space between letters are clicked, all letters are removed */
 
 .alphabet {
-    border: ridge;
+    border: 3px solid whitesmoke;
     height: 100%;
 
 }
@@ -63,24 +71,62 @@
     width: 6vh;
     border-radius: 3vh;
     font-size: 16px;
+    font-weight: 800;
+    background-color: transparent;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    color: blanchedalmond;
+}
+
+.letter:hover {
     background-color: whitesmoke;
+    color: cadetblue;
 }
 
 .midScreen {
-    border: ridge;
-    height: 5vh;
+    /* border: ridge whitesmoke; */
+    height: 8vh;
     width: 50vh;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
+input {
+    border: 3px solid gainsboro;
+    height: 7vh;
+    width: 20vh;
+    border-radius: 2vh;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: transparent;
+    color: blanchedalmond;
+}
+
+.wordChoice {
+    border: 3px solid gainsboro;
+    height: 8vh;
+    width: 20vh;
+    border-radius: 2vh;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: transparent;
+    color: blanchedalmond;
+}
+
+.wordChoice:hover {
+    background-color: whitesmoke;
+    color: cadetblue;
+}
 
 .bottomScreen {
-    border: ridge black;
+    border: 3px solid whitesmoke;
     height: 15vh;
     width: 80vh;
     margin: auto;
     color: white;
     font-size: 30px;
+    margin-top: 1vh;
 }
 
 .blankSpaces {
@@ -107,9 +153,18 @@
 }
 
 .playAgain {
+    border: 3px solid lightgray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
     font-size: 18px;
-    background-color: blanchedalmond;
+    background-color: cadetblue;
     height: 5vh;
     width: 20vh;
     border-radius: 5vh;
+    color: blanchedalmond;
+}
+
+.playAgain:hover {
+    background-color: cadetblue;
+    color: whitesmoke;
 }
