@@ -1,17 +1,12 @@
-#Project 1: Word Guesser
+Guess the Word! (Definitely "not" Hangman)
 
-// Logic Wireframe
-// * = done
-// 1. make alphabet box *
-// 1.2. select letter from alphabet box to be removed, for either right or wrong *
-// 2. make input for chosen word (either player can make up a word) *
-// 2.1 inputted word should generate blank lines below alphabet box indicated by the length of the word *
-  // 3 check if letters in word are in alphabet *
-// 4. if correct letter, then show below on blank lines *
-// 5. if incorrect letter, then hangman features are generated, up to 6 features *
-// 6. You win if you guess the word correctly
-// 7. You lose if hangman has all features
-// 8. Round ends and next player can input a word
+Objective: One player thinks of a word and the other tries to guess it by guessing letters in the word. Each correct answer will be displayed on the empty spaces. Each incorrect answer is represented by white boxes where if a player gets six boxes, they lose. Guess all letters correctly and you win!
 
-// special feature: Can guess the word ONCE, without selecting any letters
-// if correct you win, if incorrect you lose instantly
+Directions: 
+1. Decide who is going first. Start the game by having a player choose a word in their mind.
+
+2. The first player inputs a word. Empty spaces will generate based on the length of the word.
+
+3. The second player begins guessing one letter at a time. 
+
+4. If the boxes fill up the container before the word is guessed, the guessing player loses. If the player figures out the word first, they win. 
