@@ -68,6 +68,7 @@ let textCount = [] //pushing char of input word
         if (count === 6) {
           gameOn = false
           alert("You lose!")
+
           // stop the game
         }
     } 
@@ -91,6 +92,12 @@ let textCount = [] //pushing char of input word
   }
       })
     }
+
+    //reloads the page
+    const playAgain = document.querySelector(".playAgain")
+    playAgain.addEventListener("click", (e) => {
+      location.reload()
+    })
 
 
     

@@ -1,8 +1,9 @@
 .gameContainer {
     border: solid firebrick;
     height: 100vh;
-    width: 90vh;
-    background-image: url("https://i1.pickpik.com/photos/184/716/976/chalkboard-slate-green-blackboard-preview.jpg");
+    width: 100vh;
+    /* background-image: url("https://i1.pickpik.com/photos/184/716/976/chalkboard-slate-green-blackboard-preview.jpg"); */
+    background-image: url("https://t3.ftcdn.net/jpg/02/74/76/34/360_F_274763459_HADMcYrskkrAPtBDWqv4RHXz9QXjPoLX.jpg");
     background-size: cover;
     background-position: center;
     margin: auto;
@@ -32,7 +33,7 @@
 .stickFigureBox {
     border: ridge;
     height: 40vh;
-    width: 35vh;
+    width: 39vh;
 }
 
 .hangPiece {
@@ -45,17 +46,19 @@
 .alphabetBox {
     border: ridge;
     height: 40vh;
-    width: 35vh;
+    width: 39vh;
 }
 
 /* when space between letters are clicked, all letters are removed */
 
 .alphabet {
     border: ridge;
+    height: 100%;
+
 }
 
 .letter {
-    border: 4px solid gainsboro;
+    border: 3px solid gainsboro;
     height: 6vh;
     width: 6vh;
     border-radius: 3vh;
@@ -91,4 +94,22 @@
     border-bottom: 3px solid white;
     width: 4vh;
     text-align: center;
+}
+
+.playAgainContainer {
+    /* border: ridge white; */
+    height: 10vh;
+    width: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playAgain {
+    font-size: 18px;
+    background-color: blanchedalmond;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 5vh;
 }
