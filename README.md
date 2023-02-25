@@ -1,5 +1,7 @@
 Guess the Word! (Definitely "not" Hangman)
 
+Game Description: Can you beat the clock to guess the hidden word before the boxes fill up the container? Guess the Word! (Definitely "not" Hangman) is a quick and easy game that’s perfect if you’re trying to kill some time, prove your vocab superiority, or turn a boring old study session into something more exhilarating.
+
 Objective: One player thinks of a word and the other tries to guess it by guessing letters in the word. Each correct answer will be displayed on the empty spaces. Each incorrect answer is represented by white boxes where if a player gets six boxes, they lose. Guess all letters correctly and you win!
 
 Directions: 
