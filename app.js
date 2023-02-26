@@ -66,6 +66,7 @@ let textCount = [] //pushing char of input word
         hangPiece.classList.add("hangPiece")
         // 3. append or apply other methods
         wrongAnswer.append(hangPiece)
+        hangPiece.append(count)
         if (count === 6) {
           gameOn = false
           alert("You lose!")
