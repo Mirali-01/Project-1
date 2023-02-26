@@ -12,3 +12,5 @@ Directions:
 3. The second player begins guessing one letter at a time. 
 
 4. If the boxes fill up the container before the word is guessed, the guessing player loses. If the player figures out the word first, they win. 
+
+<img width="704" alt="Screen Shot 2023-02-25 at 11 16 49 PM" src="https://user-images.githubusercontent.com/26616192/221392166-2141b592-e0e5-4799-8a96-1410e0e5148f.png">
