@@ -13,4 +13,11 @@ Directions:
 
 4. If the boxes fill up the container before the word is guessed, the guessing player loses. If the player figures out the word first, they win. 
 
+Start:
+
 <img width="704" alt="Screen Shot 2023-02-25 at 11 16 49 PM" src="https://user-images.githubusercontent.com/26616192/221392166-2141b592-e0e5-4799-8a96-1410e0e5148f.png">
+
+
+Mid Game:
+
+<img width="631" alt="Screen Shot 2023-02-26 at 3 29 57 PM" src="https://user-images.githubusercontent.com/26616192/221435531-def4bc68-4fcb-4dac-9017-77a3a26392b6.png">
