@@ -26,6 +26,7 @@ body {
     justify-content: space-evenly;
     margin: auto;
     margin-top: 5vh;
+    gap: 0.5vh;
 }
 
 .stickFigureBox {
@@ -66,6 +67,7 @@ body {
     margin-top: 1vh;
     margin-left: 1vh;
     color: blanchedalmond;
+    cursor: pointer;
 }
 
 .letter:hover {
@@ -76,7 +78,7 @@ body {
 .midScreen {
     /* border: ridge whitesmoke; */
     height: 8vh;
-    width: 50vh;
+    width: 70vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -85,23 +87,26 @@ body {
 input {
     border: 3px solid gainsboro;
     height: 7vh;
-    width: 20vh;
+    width: 30vh;
     border-radius: 2vh;
     font-size: 20px;
     font-weight: 800;
     background-color: transparent;
     color: blanchedalmond;
+    text-align: center;
 }
 
 .wordChoice {
     border: 3px solid gainsboro;
     height: 8vh;
     width: 20vh;
+    margin-right: 5vh;
     border-radius: 2vh;
     font-size: 18px;
     font-weight: 800;
     background-color: transparent;
     color: blanchedalmond;
+    cursor: pointer;
 }
 
 .wordChoice:hover {
@@ -114,7 +119,7 @@ input {
     height: 15vh;
     width: 80vh;
     margin: auto;
-    color: white;
+    color: whitesmoke;
     font-size: 30px;
     margin-top: 1vh;
 }
@@ -127,7 +132,7 @@ input {
 }
 
 .space {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid whitesmoke;
     width: 4vh;
     text-align: center;
 }
@@ -152,9 +157,10 @@ input {
     width: 20vh;
     border-radius: 5vh;
     color: blanchedalmond;
+    cursor: pointer;
 }
 
 .playAgain:hover {
-    background-color: cadetblue;
+    background-color: transparent;
     color: whitesmoke;
 }

@@ -1,5 +1,6 @@
 // Word Guesser
 
+
 // default on all games
 let gameOn = true
 
@@ -24,7 +25,7 @@ let clickLetter;
 
 // checks the input word and generates blank lines for length of input word
 chooseWord.addEventListener("click", (e) => {
-  let wordValue = input.value
+  let wordValue = input.value.toLowerCase()
   inputCharacters = wordValue.split("")
   console.log(inputCharacters)
   for (let i = 0; i < wordValue.length; i++) {
