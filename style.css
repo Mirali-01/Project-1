@@ -1,17 +1,7 @@
 body {
-    margin: 0;
-    background-color: cadetblue;
-}
-
-.gameContainer {
-    /* border: solid firebrick; */
-    height: 100vh;
-    width: 100vh;
-    /* background-image: url("https://i1.pickpik.com/photos/184/716/976/chalkboard-slate-green-blackboard-preview.jpg"); */
-    background-image: url("https://t3.ftcdn.net/jpg/02/74/76/34/360_F_274763459_HADMcYrskkrAPtBDWqv4RHXz9QXjPoLX.jpg");
+    background-image: url("https://img.freepik.com/free-photo/green-dirty-blackboard_125540-774.jpg?size=626&ext=jpg&ga=GA1.1.472614986.1675387209&semt=ais");
     background-size: cover;
     background-position: center;
-    margin: auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
