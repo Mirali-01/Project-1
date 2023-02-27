@@ -58,10 +58,9 @@ let textCount = [] //pushing char of input word
       
     if (gameOn)  {
   // wrong answer function
-  // needs to stop at 6 divs
     if (!inputCharacters.includes(clickLetter) && count < 6) {
         count ++
-        console.log(count)
+        // console.log(count)
         // 1. create element
         let hangPiece = document.createElement("div")
         // 2. give it a name
