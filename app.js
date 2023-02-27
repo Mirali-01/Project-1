@@ -69,9 +69,9 @@ let textCount = [] //pushing char of input word
         wrongAnswer.append(hangPiece)
         hangPiece.append(count)
         if (count === 6) {
-          // word input must display at loss
           gameOn = false
           alert(`You lose, the word was ${input.value.toUpperCase()}`)
+          blankSpaces.replaceChildren(input.value.toUpperCase())
           // stop the game
         }
     } 
