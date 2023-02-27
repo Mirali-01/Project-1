@@ -159,7 +159,7 @@ input {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
     font-size: 18px;
-    background-color: cadetblue;
+    background-color: transparent;
     height: 5vh;
     width: 20vh;
     border-radius: 5vh;
@@ -169,6 +169,6 @@ input {
 
 .playAgain:hover,
 .guessWord:hover {
-    background-color: transparent;
+    background-color: cadetblue;
     color: whitesmoke;
 }
