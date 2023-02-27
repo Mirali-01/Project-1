@@ -1,5 +1,6 @@
 // Word Guesser
 
+// show answer function for correct/incorrect answers
 
 // default on all games
 let gameOn = true
@@ -27,7 +28,7 @@ let clickLetter;
 chooseWord.addEventListener("click", (e) => {
   let wordValue = input.value.toLowerCase()
   inputCharacters = wordValue.split("")
-  console.log(inputCharacters)
+  // console.log(inputCharacters)
   for (let i = 0; i < wordValue.length; i++) {
       // 1. create element
     spaces = document.createElement('div')
@@ -48,11 +49,11 @@ let textCount = [] //pushing char of input word
 
 
   for (let i = 0; i < alphabet.length; i++) {
-    console.log(button[i]) //HTML element
+    // console.log(button[i]) //HTML element
     console.log(button[i].textContent) //text in HTML element
     button[i].addEventListener("click", (e) => {
       clickLetter = e.target.textContent.toLowerCase()
-      console.log(clickLetter)
+      // console.log(clickLetter)
       
     if (gameOn)  {
   // wrong answer function
