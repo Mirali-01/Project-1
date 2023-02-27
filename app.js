@@ -101,13 +101,20 @@ let textCount = [] //pushing char of input word
       })
     }
 
+    // guess word ONCE per game
+    const guessWord = document.querySelector(".guessWord")
+    guessWord.addEventListener("click", (e) => {
+      let guess = prompt("Take a guess, you only get ONE chance!")
+      if (guess === input.value) {
+        
+      }
+    })
+
     //reloads the page
     const playAgain = document.querySelector(".playAgain")
     playAgain.addEventListener("click", (e) => {
       location.reload()
     })
-
-
     
 // Reference for repeating characters in a string
 // const word = "happy"
