@@ -70,7 +70,7 @@ let textCount = [] //pushing char of input word
         hangPiece.append(count)
         if (count === 6) {
           gameOn = false
-          alert(`You lose, the word was ${input.value.toUpperCase()}`)
+          hangPiece.replaceChildren("You Lose!")
           blankSpaces.replaceChildren(input.value.toUpperCase())
           // stop the game
         }
