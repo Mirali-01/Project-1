@@ -1,5 +1,8 @@
 // Word Guesser
 
+// special feature: Can guess the word ONCE, without selecting any letters
+// if correct you win, if incorrect you lose instantly
+
 // default on all games
 let gameOn = true
 
@@ -140,6 +143,3 @@ let textCount = [] //pushing char of input word
 // 6. You win if you guess the word correctly *
 // 7. You lose if hangman has all features *
 // 8. Round ends and next player can input a word *
-
-// special feature: Can guess the word ONCE, without selecting any letters
-// if correct you win, if incorrect you lose instantly
