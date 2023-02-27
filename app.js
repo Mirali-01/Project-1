@@ -133,7 +133,7 @@ let textCount = [] //pushing char of input word
   // 3 check if letters in word are in alphabet *
 // 4. if correct letter, then show below on blank lines *
 // 5. if incorrect letter, then hangman features are generated, up to 6 features *
-// 6. You win if you guess the word correctly
+// 6. You win if you guess the word correctly 
 // 7. You lose if hangman has all features
 // 8. Round ends and next player can input a word
 
