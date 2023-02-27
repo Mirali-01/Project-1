@@ -1,7 +1,5 @@
 // Word Guesser
 
-// show answer function for correct/incorrect answers
-
 // default on all games
 let gameOn = true
 
@@ -86,7 +84,13 @@ let textCount = [] //pushing char of input word
     console.log(input.value.length)
       if (textCount.length === input.value.length) {
         gameOn = false
-        alert("You win!")
+        // 1. create element
+        let hangPiece = document.createElement("div")
+        // 2. give it a name
+        hangPiece.classList.add("hangPiece")
+        // 3. append or apply other methods
+        wrongAnswer.append(hangPiece)
+        hangPiece.append("You Win!")
         // stop the game
       }
     }
