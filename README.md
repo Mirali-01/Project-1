@@ -11,7 +11,8 @@ Directions:
 
   2. The first player inputs a word. Empty spaces will generate based on the length of the word.
 
-  3. The second player begins guessing one letter at a time. 
+  3. The second player begins guessing one letter at a time or can choose to guess the word in one try.
+  Note: By guessing the word in one try, incorrectly, you lose instantly.
 
   4. If the boxes fill up the container before the word is guessed, the guessing player loses. If the player figures out the word first, they win. 
 
