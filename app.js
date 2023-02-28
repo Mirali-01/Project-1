@@ -1,5 +1,7 @@
 // Guess the Word!
 
+// Remember to add media queries for varying mobile sizes, not just Desktop version
+
 // add a random word button where if it's one or any player, they can get a random word from a library
 // const random = document.querySelector(".random")
 // random.addEventListener("click", (e) => {
@@ -33,6 +35,7 @@ const alphabetLetters = document.querySelector(".alphabet")
 const chooseWord = document.querySelector(".wordChoice")
 const input = document.querySelector("input")
 
+// undeclared variables to store info from functions *beneficial to remember*
 let spaceDivs;
 let spaces;
 let inputCharacters;
@@ -134,6 +137,7 @@ let textCount = [] //pushing char of input word
       }
     })
 
+    // instead of reload, reset/reinitialize variables
     //reloads the page
     const playAgain = document.querySelector(".playAgain")
     playAgain.addEventListener("click", (e) => {
