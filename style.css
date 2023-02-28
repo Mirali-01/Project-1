@@ -150,13 +150,14 @@ input {
     width: 61vh;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 
-/* ,.guessWord */
-.playAgain {
+
+.playAgain,
+.guessWord {
     border: 3px solid lightgray;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
@@ -170,8 +171,9 @@ input {
 }
 
 
-/* ,.guessWord:hover */
-.playAgain:hover {
+
+.playAgain:hover,
+.guessWord:hover {
     background-color: cadetblue;
     color: whitesmoke;
 }

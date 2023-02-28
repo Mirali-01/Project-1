@@ -101,15 +101,20 @@ let textCount = [] //pushing char of input word
       })
     }
 
+    // problems: needs to be able to accept any cased words
+    // button shouldnt disappear after cancelling
+    
     // guess word ONCE per game
     const guessWord = document.querySelector(".guessWord")
     guessWord.addEventListener("click", (e) => {
       let guess = prompt("Take a guess, you only get ONE chance!")
-      if (guess === input.value) {
-        blankSpaces.replaceChildren(`${input.value.toUpperCase()} is correct! You Win!`)
+      if (guess !== null) {
         guessWord.remove()
-      } else {
-        blankSpaces.replaceChildren("You Lose!")
+      } else if (guess !== input.value) {
+        blankSpaces.replaceChildren(`The word was ${input.value.toUpperCase()}! You Lose!`)
+        guessWord.remove()
+      } else if (guess === input.value) {
+        blankSpaces.replaceChildren(`${input.value.toUpperCase()} is correct! You Win!`)
         guessWord.remove()
       }
     })
