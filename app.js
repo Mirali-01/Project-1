@@ -1,6 +1,21 @@
-// Word Guesser
+// Guess the Word!
 
 // add a random word button where if it's one or any player, they can get a random word from a library
+// const random = document.querySelector(".random")
+// random.addEventListener("click", (e) => {
+//   // add library of words
+//   const library = []
+//   // 1. create element
+//   spaces = document.createElement('div')
+//   // spaces.setAttribute("class", "space") adds inline
+//     // 2. give it a name
+//   spaces.classList.add("space") //creates an array of classes and adds a name to the array
+//     // 3. append or apply other methods
+//   blankSpaces.append(spaces)
+//   midScreen.remove()
+//   spaceDivs = [...library[i][j]]
+// })
+
 
 // default on all games
 let gameOn = true
