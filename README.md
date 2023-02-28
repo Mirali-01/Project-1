@@ -17,9 +17,9 @@ Directions:
 
 Start:
 
-<img width="704" alt="Screen Shot 2023-02-25 at 11 16 49 PM" src="https://user-images.githubusercontent.com/26616192/221392166-2141b592-e0e5-4799-8a96-1410e0e5148f.png">
+<img width="647" alt="Screen Shot 2023-02-27 at 8 27 27 PM" src="https://user-images.githubusercontent.com/26616192/221729538-30f0d427-12c8-431a-be6a-123fded7cfc6.png">
 
 
 Mid Game:
 
-<img width="631" alt="Screen Shot 2023-02-26 at 3 29 57 PM" src="https://user-images.githubusercontent.com/26616192/221435531-def4bc68-4fcb-4dac-9017-77a3a26392b6.png">
+<img width="649" alt="Screen Shot 2023-02-27 at 8 29 59 PM" src="https://user-images.githubusercontent.com/26616192/221729602-eb45170e-2816-49a1-b307-c8c2a0b14e92.png">
