@@ -11,7 +11,6 @@ const wrongAnswer = document.querySelector(".stickFigureBox")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
-// const playAgainBox = document.querySelector(".playAgainContainer")
 
 // start by inserting player's word
 const chooseWord = document.querySelector(".wordChoice")
@@ -21,8 +20,6 @@ let spaceDivs;
 let spaces;
 let inputCharacters;
 let clickLetter;
-
-// let guessWordBox = document.querySelector(".playAgain")
 
 // checks the input word and generates blank lines for length of input word
 chooseWord.addEventListener("click", (e) => {
@@ -73,6 +70,7 @@ let textCount = [] //pushing char of input word
           gameOn = false
           hangPiece.replaceChildren("You Lose!")
           blankSpaces.replaceChildren(input.value.toUpperCase())
+          guessWord.remove()
           // stop the game
         }
     } 
@@ -93,6 +91,7 @@ let textCount = [] //pushing char of input word
         // 3. append or apply other methods
         wrongAnswer.append(hangPiece)
         hangPiece.append("You Win!")
+        guessWord.remove()
         // stop the game
       }
     }
@@ -110,11 +109,11 @@ let textCount = [] //pushing char of input word
         guessWord.append()
       } else if (guess !== input.value) {
         blankSpaces.replaceChildren(`The word was ${input.value.toUpperCase()}! You Lose!`)
-        guessWord.remove()
+        guessWord.classList.add("invisible")
         gameOn = false
       } else if (guess === input.value) {
         blankSpaces.replaceChildren(`${input.value.toUpperCase()} is correct! You Win!`)
-        guessWord.remove()
+        guessWord.classList.add("invisible")
         gameOn = false
       }
     })
