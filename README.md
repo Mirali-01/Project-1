@@ -7,7 +7,7 @@ Game Description: Can you beat the clock to guess the hidden word before the box
 Objective: One player thinks of a word and the other tries to guess it by guessing letters in the word. Each correct answer will be displayed on the empty spaces. Each incorrect answer is represented by white boxes where if a player gets six boxes, they lose. Guess all letters correctly and you win!
 
 Directions: 
-  1. Decide who is going first. Start the game by having a player choose a word in their mind.
+  1. Decide who is going first. Start the game by having a player choose a word.
 
   2. The first player inputs a word. Empty spaces will generate based on the length of the word.
 
