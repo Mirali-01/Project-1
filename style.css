@@ -156,7 +156,20 @@ input {
 
 
 
-.playAgain,
+.playAgain {
+    border: 3px solid lightgray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 18px;
+    background-color: transparent;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 5vh;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+
 .guessWord {
     border: 3px solid lightgray;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -168,6 +181,10 @@ input {
     border-radius: 5vh;
     color: blanchedalmond;
     cursor: pointer;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 

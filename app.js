@@ -1,8 +1,5 @@
 // Word Guesser
 
-// special feature: Can guess the word ONCE, without selecting any letters
-// if correct you win, if incorrect you lose instantly
-
 // default on all games
 let gameOn = true
 
@@ -14,7 +11,7 @@ const wrongAnswer = document.querySelector(".stickFigureBox")
 const blankSpaces = document.querySelector(".blankSpaces")
 const midScreen = document.querySelector(".midScreen")
 const alphabetLetters = document.querySelector(".alphabet")
-
+// const playAgainBox = document.querySelector(".playAgainContainer")
 
 // start by inserting player's word
 const chooseWord = document.querySelector(".wordChoice")
@@ -25,11 +22,15 @@ let spaces;
 let inputCharacters;
 let clickLetter;
 
+// let guessWordBox = document.querySelector(".playAgain")
+
 // checks the input word and generates blank lines for length of input word
 chooseWord.addEventListener("click", (e) => {
   let wordValue = input.value.toLowerCase()
   inputCharacters = wordValue.split("")
-  // console.log(inputCharacters)
+  console.log(inputCharacters)
+  guessWord.classList.remove("invisible")
+
   for (let i = 0; i < wordValue.length; i++) {
       // 1. create element
     spaces = document.createElement('div')
@@ -102,20 +103,19 @@ let textCount = [] //pushing char of input word
     }
 
     // problems: needs to be able to accept any cased words
-    // button shouldnt disappear after cancelling
-    
-    // guess word ONCE per game
     const guessWord = document.querySelector(".guessWord")
     guessWord.addEventListener("click", (e) => {
       let guess = prompt("Take a guess, you only get ONE chance!")
-      if (guess !== null) {
-        guessWord.remove()
+      if (guess === null) {
+        guessWord.append()
       } else if (guess !== input.value) {
         blankSpaces.replaceChildren(`The word was ${input.value.toUpperCase()}! You Lose!`)
         guessWord.remove()
+        gameOn = false
       } else if (guess === input.value) {
         blankSpaces.replaceChildren(`${input.value.toUpperCase()} is correct! You Win!`)
         guessWord.remove()
+        gameOn = false
       }
     })
 
