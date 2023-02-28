@@ -1,5 +1,7 @@
 // Word Guesser
 
+// add a random word button where if it's one or any player, they can get a random word from a library
+
 // default on all games
 let gameOn = true
 
@@ -49,7 +51,7 @@ let textCount = [] //pushing char of input word
 
   for (let i = 0; i < alphabet.length; i++) {
     // console.log(button[i]) //HTML element
-    console.log(button[i].textContent) //text in HTML element
+    // console.log(button[i].textContent) //text in HTML element
     button[i].addEventListener("click", (e) => {
       clickLetter = e.target.textContent.toLowerCase()
       // console.log(clickLetter)
@@ -101,17 +103,16 @@ let textCount = [] //pushing char of input word
       })
     }
 
-    // problems: needs to be able to accept any cased words
     const guessWord = document.querySelector(".guessWord")
     guessWord.addEventListener("click", (e) => {
       let guess = prompt("Take a guess, you only get ONE chance!")
       if (guess === null) {
         guessWord.append()
-      } else if (guess !== input.value) {
+      } else if (guess.toUpperCase() !== input.value.toUpperCase()) {
         blankSpaces.replaceChildren(`The word was ${input.value.toUpperCase()}! You Lose!`)
         guessWord.classList.add("invisible")
         gameOn = false
-      } else if (guess === input.value) {
+      } else if (guess.toUpperCase() === input.value.toUpperCase()) {
         blankSpaces.replaceChildren(`${input.value.toUpperCase()} is correct! You Win!`)
         guessWord.classList.add("invisible")
         gameOn = false
