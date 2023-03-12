@@ -84,7 +84,7 @@ body {
 .midScreen {
     /* border: ridge whitesmoke; */
     height: 8vh;
-    width: 60vh;
+    width: 75vh;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -116,6 +116,24 @@ input {
 }
 
 .wordChoice:hover {
+    background-color: whitesmoke;
+    color: cadetblue;
+}
+
+.randomWord {
+    border: 3px solid gainsboro;
+    height: 8vh;
+    width: 20vh;
+    margin-right: 5vh;
+    border-radius: 2vh;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: transparent;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+.randomWord:hover {
     background-color: whitesmoke;
     color: cadetblue;
 }
@@ -170,6 +188,19 @@ input {
 
 
 .guessWord {
+    border: 3px solid lightgray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 18px;
+    background-color: transparent;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 5vh;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+.randomGuessWord {
     border: 3px solid lightgray;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
