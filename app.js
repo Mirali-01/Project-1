@@ -215,7 +215,7 @@ randomWord.addEventListener("click", (e) => {
                 gameOn = false;
                 hangPiece.replaceChildren("You Lose!");
                 blankSpaces.replaceChildren(word[random].toUpperCase());
-                guessWord.remove();
+                randomGuessWord.remove();
                 // stop the game
               }
             }
@@ -236,7 +236,7 @@ randomWord.addEventListener("click", (e) => {
                   // 3. append or apply other methods
                   wrongAnswer.append(hangPiece);
                   hangPiece.append("You Win!");
-                  guessWord.remove();
+                  randomGuessWord.remove();
                   // stop the game
                 }
               }
