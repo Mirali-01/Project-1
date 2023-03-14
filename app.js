@@ -1,6 +1,11 @@
 // Guess the Word!
 
 // Remember to add media queries for varying mobile sizes, not just Desktop version
+// fix text that it supposed to appear after you win/lose for the random word function
+// Hints in Guess the Word! - give a random letter or first letter in the random word
+// Audio in the background
+// Songs on click or audio on click
+// Comments on GuessTheWord - use a database or local storage - learning in Mod 3
 
 // default on all games
 let gameOn = true;
