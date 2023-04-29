@@ -5,7 +5,6 @@
 // Hints in Guess the Word! - give a random letter or first letter in the random word
 // Audio in the background
 // Songs on click or audio on click
-// Comments on GuessTheWord - use a database or local storage - learning in Mod 3
 
 // default on all games
 let gameOn = true;
@@ -39,6 +38,16 @@ const alphabet = [
   "Y",
   "Z",
 ];
+
+const keyDown = (e) => {
+  e = window.event || e;
+  key = e.keyCode;
+  //space pressed
+  if ((key >= 32 && key < 65) || key >= 91) {
+    //space
+    e.preventDefault();
+  }
+};
 
 // query selectors
 const wrongAnswer = document.querySelector(".stickFigureBox");
