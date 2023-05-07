@@ -1,8 +1,17 @@
+/* html{
+    display: flex;
+    align-items: center;
+} */
+
 body {
     background-image: url("https://img.freepik.com/free-photo/green-dirty-blackboard_125540-774.jpg?size=626&ext=jpg&ga=GA1.1.472614986.1675387209&semt=ais");
     background-size: cover;
     background-position: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 .title {
@@ -12,7 +21,7 @@ body {
     margin: auto;
     margin-top: 3vh;
     text-align: center;
-    font-size: 50px;
+    font-size: 8vh;
     margin-top: 3.5vh;
     color: whitesmoke;
     text-decoration: underline;
@@ -30,7 +39,7 @@ body {
 }
 
 .stickFigureBox {
-    border: 3px solid whitesmoke;
+    border: 0.4vh solid whitesmoke;
     height: 45vh;
     width: 39vh;
 }
@@ -47,7 +56,7 @@ body {
     height: 6.4vh;
     margin: 2px;
     margin-top: 0.5vh;
-    font-size: 24px;
+    font-size: 3vh;
     font-weight: 800;
     display: flex;
     justify-content: center;
@@ -56,17 +65,17 @@ body {
 }
 
 .alphabet {
-    border: 3px solid whitesmoke;
+    border: 0.4vh solid whitesmoke;
     height: 100%;
 
 }
 
 .letter {
-    border: 3px solid gainsboro;
+    border: 0.4vh solid gainsboro;
     height: 6vh;
     width: 6vh;
     border-radius: 3vh;
-    font-size: 16px;
+    font-size: 2.35vh;
     font-weight: 800;
     background-color: transparent;
     margin-top: 1vh;
@@ -90,11 +99,11 @@ body {
 }
 
 input {
-    border: 3px solid gainsboro;
+    border: 0.4vh solid gainsboro;
     height: 7vh;
     width: 30vh;
     border-radius: 2vh;
-    font-size: 24px;
+    font-size: 3.5vh;
     font-weight: 800;
     background-color: transparent;
     color: blanchedalmond;
@@ -102,12 +111,12 @@ input {
 }
 
 .wordChoice {
-    border: 3px solid gainsboro;
+    border: 0.4vh solid gainsboro;
     height: 8vh;
     width: 20vh;
     margin-right: 5vh;
     border-radius: 2vh;
-    font-size: 18px;
+    font-size: 2.35vh;
     font-weight: 800;
     background-color: transparent;
     color: blanchedalmond;
@@ -120,12 +129,12 @@ input {
 }
 
 .randomWord {
-    border: 3px solid gainsboro;
+    border: 0.4vh solid gainsboro;
     height: 8vh;
     width: 20vh;
     margin-right: 5vh;
     border-radius: 2vh;
-    font-size: 18px;
+    font-size: 2.35vh;
     font-weight: 800;
     background-color: transparent;
     color: blanchedalmond;
@@ -138,24 +147,24 @@ input {
 }
 
 .bottomScreen {
-    border: 3px solid whitesmoke;
+    border: 0.4vh solid whitesmoke;
     height: 15vh;
-    width: 80vh;
+    width: 79.5vh;
     margin: auto;
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 4vh;
     margin-top: 1vh;
 }
 
 .blankSpaces {
-    height: 10vh;
+    height: 14.25vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .space {
-    border-bottom: 3px solid whitesmoke;
+    border-bottom: 0.4vh solid whitesmoke;
     width: 4vh;
     text-align: center;
 }
@@ -173,10 +182,9 @@ input {
 
 
 .playAgain {
-    border: 3px solid lightgray;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 0.4vh solid lightgray;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 2.35vh;
     background-color: transparent;
     height: 5vh;
     width: 20vh;
@@ -187,10 +195,9 @@ input {
 
 
 .guessWord {
-    border: 3px solid lightgray;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 0.4vh solid lightgray;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 2.35vh;
     background-color: transparent;
     height: 5vh;
     width: 20vh;
@@ -200,10 +207,9 @@ input {
 }
 
 .randomGuessWord {
-    border: 3px solid lightgray;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 0.4vh solid lightgray;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 2.35vh;
     background-color: transparent;
     height: 5vh;
     width: 20vh;
