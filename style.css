@@ -8,10 +8,10 @@ body {
     background-size: cover;
     background-position: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-content: center; */
 }
 
 .title {
