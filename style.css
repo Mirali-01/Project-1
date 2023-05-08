@@ -10,7 +10,7 @@ body {
 }
 
 .gameContainer{
-    border: solid yellow;
+    /* border: solid yellow; */
     height: 100vh;
     width: 90vh;
     margin: auto;
