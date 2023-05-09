@@ -120,7 +120,7 @@ input {
     text-align: center;
 }
 
-.wordChoice {
+.submitWord {
     border: 0.4vh solid gainsboro;
     height: 8vh;
     width: 20vh;
@@ -133,7 +133,7 @@ input {
     cursor: pointer;
 }
 
-.wordChoice:hover {
+.submitWord:hover {
     background-color: whitesmoke;
     color: cadetblue;
 }
@@ -189,40 +189,17 @@ input {
     align-items: center;
 }
 
-.playAgain {
+.playAgain, .randomGuessWord, .guessWord {
     border: 0.4vh solid lightgray;
     font-weight: 800;
     font-size: 2.35vh;
     background-color: transparent;
-    height: 5vh;
-    width: 20vh;
-    border-radius: 5vh;
+    height: 8vh;
+    width: 22vh;
+    border-radius: 3vh;
     color: blanchedalmond;
     cursor: pointer;
-}
-
-.guessWord {
-    border: 0.4vh solid lightgray;
-    font-weight: 800;
-    font-size: 2.35vh;
-    background-color: transparent;
-    height: 5vh;
-    width: 20vh;
-    border-radius: 5vh;
-    color: blanchedalmond;
-    cursor: pointer;
-}
-
-.randomGuessWord {
-    border: 0.4vh solid lightgray;
-    font-weight: 800;
-    font-size: 2.35vh;
-    background-color: transparent;
-    height: 5vh;
-    width: 20vh;
-    border-radius: 5vh;
-    color: blanchedalmond;
-    cursor: pointer;
+    margin-top: 0.5vh;
 }
 
 .invisible {

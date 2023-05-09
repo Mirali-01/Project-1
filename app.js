@@ -1,5 +1,6 @@
 // Guess the Word!
 
+// Submit word should not submit when empty
 // fix text so that it supposed to appear after you win/lose for the random word function
 // Hints in Guess the Word! - give a random letter or first letter in the random word
 // Audio in the background
@@ -55,7 +56,7 @@ const midScreen = document.querySelector(".midScreen");
 const alphabetLetters = document.querySelector(".alphabet");
 
 // start by inserting player's word
-const chooseWord = document.querySelector(".wordChoice");
+const submitWord = document.querySelector(".submitWord");
 const input = document.querySelector("input");
 
 // undeclared variables to store info from functions *beneficial to remember*
@@ -65,10 +66,14 @@ let inputCharacters;
 let clickLetter;
 
 // checks the input word and generates blank lines for length of input word
-chooseWord.addEventListener("click", (e) => {
+submitWord.addEventListener("click", (e) => {
+  if (input.value === "") {
+    e.preventDefault();
+    return;
+  }
   let wordValue = input.value.toLowerCase();
   inputCharacters = wordValue.split("");
-  console.log(inputCharacters);
+  // console.log(inputCharacters);
   guessWord.classList.remove("invisible");
 
   for (let i = 0; i < wordValue.length; i++) {
@@ -123,8 +128,8 @@ for (let i = 0; i < alphabet.length; i++) {
         if (inputCharacters[i] === clickLetter) {
           spaceDivs[i].textContent = clickLetter.toUpperCase();
           textCount.push(spaceDivs[i].textContent);
-          console.log(textCount.length);
-          console.log(input.value.length);
+          // console.log(textCount.length);
+          // console.log(input.value.length);
           if (textCount.length === input.value.length) {
             gameOn = false;
             // 1. create element
@@ -183,7 +188,7 @@ randomWord.addEventListener("click", (e) => {
     .then((data) => {
       word = data;
       const random = Math.floor(Math.random() * word.length);
-      console.log(word, random);
+      // console.log(word, random);
       const randomGuessWord = document.createElement("button");
       randomGuessWord.innerHTML = "Guess Word";
       randomGuessWord.classList.add("randomGuessWord");
@@ -238,8 +243,8 @@ randomWord.addEventListener("click", (e) => {
               if (word[random][i] === clickLetter) {
                 spaceDivs[i].textContent = clickLetter.toUpperCase();
                 textCount.push(spaceDivs[i].textContent);
-                console.log(textCount.length);
-                console.log(word[random].length);
+                // console.log(textCount.length);
+                // console.log(word[random].length);
                 if (textCount.length === word[random].length) {
                   gameOn = false;
                   // 1. create element
@@ -282,35 +287,3 @@ randomWord.addEventListener("click", (e) => {
       });
     });
 });
-
-// Reference for repeating characters in a string
-// const word = "happy"
-// const chars = word.split("")
-
-// for (let i = 0; i < chars.length; i++) {
-//   console.log(chars[i], chars.indexOf(chars[i], i))
-// }
-
-// extra stuff that I might use later
-// setTimeout(() => {
-//   let someFunction = () => {
-
-//   }
-// }, 1000)
-
-// letters.forEach(button => {
-//   button.addEventListener("click", () =>  button.remove())
-// })
-
-// Logic Wireframe
-// * = done
-// 1. make alphabet box *
-// 1.2. select letter from alphabet box to be removed, for either right or wrong *
-// 2. make input for chosen word (either player can make up a word) *
-// 2.1 inputted word should generate blank lines below alphabet box indicated by the length of the word *
-// 3 check if letters in word are in alphabet *
-// 4. if correct letter, then show below on blank lines *
-// 5. if incorrect letter, then hangman features are generated, up to 6 features *
-// 6. You win if you guess the word correctly *
-// 7. You lose if hangman has all features *
-// 8. Round ends and next player can input a word *
