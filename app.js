@@ -1,10 +1,13 @@
 // Guess the Word!
 
-// Submit word should not submit when empty
 // fix text so that it supposed to appear after you win/lose for the random word function
 // Hints in Guess the Word! - give a random letter or first letter in the random word
 // Audio in the background
 // Songs on click or audio on click
+// modal: How to Play
+// Nav: menu, game Logo, modal for how to play
+// Maybe a sign in, maybe???
+// dark theme?
 
 // default on all games
 let gameOn = true;
@@ -100,10 +103,13 @@ for (let i = 0; i < alphabet.length; i++) {
   // console.log(button[i].textContent) //text in HTML element
   button[i].addEventListener("click", (e) => {
     clickLetter = e.target.textContent.toLowerCase();
-    // console.log(clickLetter)
 
     if (gameOn) {
       // wrong answer function
+      if (inputCharacters === undefined) {
+        return;
+      }
+
       if (!inputCharacters.includes(clickLetter) && count < 6) {
         count++;
         // console.log(count)
