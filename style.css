@@ -1,3 +1,5 @@
+/* use vw */
+/* use media queries */
 *{
     margin: 0;
 }
@@ -6,6 +8,7 @@ body {
     background-image: url("https://img.freepik.com/free-photo/green-dirty-blackboard_125540-774.jpg?size=626&ext=jpg&ga=GA1.1.472614986.1675387209&semt=ais");
     background-size: cover;
     background-position: center;
+    /* background-color: black; */ 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -14,6 +17,8 @@ body {
     height: 100vh;
     width: 90vh;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -21,7 +26,6 @@ body {
     height: 10vh;
     width: 80vh;
     margin: auto;
-    margin-top: 3.5vh;
     text-align: center;
     font-size: 8vh;
     color: whitesmoke;
@@ -30,12 +34,11 @@ body {
 
 .topScreen {
     /* border: ridge purple; */
-    height: 47vh;
+    height: 45vh;
     width: 80vh;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
-    margin-top: 5vh;
     gap: 0.5vh;
 }
 
@@ -47,13 +50,7 @@ body {
     flex-direction: column;
     gap: 0.5vh;
     align-items: center;
-    /* justify-content: center; */
-}
-
-.alphabetBox {
-    /* border: ridge; */
-    height: 45vh;
-    width: 39vh;
+    overflow: scroll;
 }
 
 .hangPiece {
@@ -62,7 +59,7 @@ body {
     color: whitesmoke;
     height: 6.75vh;
     width: 38vh;
-    font-size: 3vh;
+    font-size: 3.5vh;
     font-weight: 800;
     display: flex;
     justify-content: center;
@@ -72,11 +69,12 @@ body {
 .alphabet {
     border: 0.4vh solid whitesmoke;
     height: 45vh;
+    width: 39vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 0.5vh;
+    gap: 1vh;
     overflow: scroll;
 }
 
@@ -96,17 +94,24 @@ body {
     align-items: center;
 }
 
-.letter:hover {
-    background-color: whitesmoke;
-    color: cadetblue;
-}
-
 .midScreen {
     /* border: ridge whitesmoke; */
     height: 8vh;
-    width: 75vh;
+    width: 80vh;
     margin: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.yourWord{
+    height: 8vh;
+    width: 55vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
@@ -121,40 +126,16 @@ input {
     text-align: center;
 }
 
-.submitWord {
+.submitWord, .randomWord {
     border: 0.4vh solid gainsboro;
     height: 8vh;
     width: 20vh;
-    margin-right: 5vh;
     border-radius: 2vh;
     font-size: 2.35vh;
     font-weight: 800;
     background-color: transparent;
     color: blanchedalmond;
     cursor: pointer;
-}
-
-.submitWord:hover {
-    background-color: whitesmoke;
-    color: cadetblue;
-}
-
-.randomWord {
-    border: 0.4vh solid gainsboro;
-    height: 8vh;
-    width: 20vh;
-    margin-right: 5vh;
-    border-radius: 2vh;
-    font-size: 2.35vh;
-    font-weight: 800;
-    background-color: transparent;
-    color: blanchedalmond;
-    cursor: pointer;
-}
-
-.randomWord:hover {
-    background-color: whitesmoke;
-    color: cadetblue;
 }
 
 .bottomScreen {
@@ -164,12 +145,13 @@ input {
     margin: auto;
     color: whitesmoke;
     font-size: 4vh;
-    margin-top: 1vh;
 }
 
 .blankSpaces {
     height: 14.25vh;
+    width: 79.5vh;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -183,11 +165,13 @@ input {
 .playAgainContainer {
     /* border: ridge white; */
     height: 10vh;
-    width: 61vh;
+    width: 60vh;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 10vh;
 }
 
 .playAgain, .randomGuessWord, .guessWord {
@@ -200,15 +184,18 @@ input {
     border-radius: 3vh;
     color: blanchedalmond;
     cursor: pointer;
-    margin-top: 0.5vh;
 }
 
 .invisible {
     visibility: hidden;
 }
 
+.letter:hover,
+.randomWord:hover, 
+.submitWord:hover, 
 .playAgain:hover,
-.guessWord:hover {
+.guessWord:hover,
+.randomGuessWord:hover {
     background-color: cadetblue;
     color: whitesmoke;
 }
