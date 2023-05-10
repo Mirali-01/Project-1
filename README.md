@@ -19,8 +19,8 @@ Directions:
 
 Start:
 
-<img width="647" alt="Screen Shot 2023-02-27 at 8 27 27 PM" src="https://user-images.githubusercontent.com/26616192/221729538-30f0d427-12c8-431a-be6a-123fded7cfc6.png">
+<img width="669" alt="Screen Shot 2023-05-10 at 6 24 51 PM" src="https://github.com/Mirali-01/Project-1/assets/26616192/80388b0a-8813-4750-b5fb-d4428b6f01d7">
 
 Mid Game:
 
-<img width="649" alt="Screen Shot 2023-02-27 at 8 29 59 PM" src="https://user-images.githubusercontent.com/26616192/221729602-eb45170e-2816-49a1-b307-c8c2a0b14e92.png">
+<img width="668" alt="Screen Shot 2023-05-10 at 6 24 27 PM" src="https://github.com/Mirali-01/Project-1/assets/26616192/12dd2931-d618-478f-a9bd-0190165df6bf">
