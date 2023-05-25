@@ -8,14 +8,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
       rel="icon"
       href="https://www.transparentpng.com/thumb/chalk-png/chalkboard-icon-image-30.png"
     />
   </head>
-  <body>
-    <div class="gameContainer">
-      <h1 class="title">Guess The Word!</h1>
+  <body class="active">
+    <div class="nav">
+      <div class="navElements">
+        <div class="wrapper">
+          <div class="section">
+            <div class="top_navbar">
+              <div class="hamburger">
+                <a href="#">
+                  <i class="fas fa-bars"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar">
+            <div class="profile">
+              <img
+                src="https://www.transparentpng.com/thumb/chalk-png/chalkboard-icon-image-30.png"
+                alt="profile"
+              />
+              <h3>Guess The Word!</h3>
+              <p>By: Mir Ali</p>
+            </div>
+            <ul>
+              <li>
+                <a href="#" onclick="location.reload()" class="active">
+                  <span class="icon"><i class="fa fa-home"></i></span>
+                  <span class="item">Home</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Mirali-01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="icon"
+                    ><i class="fa-brands fa-github fa-xl"></i
+                  ></span>
+                  <span class="item">GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mir-mali/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="icon"
+                    ><i class="fa-brands fa-linkedin fa-xl"></i
+                  ></span>
+                  <span class="item">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:mir.m.ali01@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="icon"><i class="fa fa-envelope fa-xl"></i></span>
+                  <span class="item">Email</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="navElements">
+        <h1 class="title">Guess The Word!</h1>
+      </div>
+      <div class="navElements">
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">
+          <a href="#">
+            <i
+              class="fa-solid fa-question fa-2xl"
+              style="color: whitesmoke"
+            ></i>
+          </a>
+        </button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">
+              <i class="fa-solid fa-window-close"></i>
+            </span>
+            <p>
+              Objective: One player thinks of a word and the other tries to
+              guess it by guessing letters in the word. Each correct answer will
+              be displayed on the empty spaces. Each incorrect answer is
+              represented by white boxes where if a player gets six boxes, they
+              lose. Guess all letters correctly and you win!
+            </p>
 
+            <br />
+            Directions:
+
+            <ul>
+              <br />
+              <li>
+                1. Decide who is going first. Start the game by having a player
+                choose a word.
+              </li>
+              <br />
+              <li>
+                2. The first player inputs a word. Empty spaces will generate
+                based on the length of the word.
+              </li>
+              <br />
+              <li>
+                3. The second player begins guessing one letter at a time or can
+                choose to guess the word in one try. Note: By guessing the word
+                in one try, incorrectly, you lose instantly.
+              </li>
+              <br />
+              <li>
+                4. If the boxes fill up the container before the word is
+                guessed, the guessing player loses. If the player figures out
+                the word first, they win.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="toggleDark" onclick="myFunction()">
+          <a href="#">
+            <i
+              class="fa-solid fa-circle-half-stroke fa-2xl"
+              style="color: #ffffff"
+            ></i>
+          </a>
+        </button>
+      </div>
+    </div>
+    <div class="gameContainer">
       <div class="topScreen">
         <div class="stickFigureBox"></div>
         <div class="alphabet">
@@ -64,7 +199,7 @@
         <button class="playAgain">Play Again</button>
       </div>
     </div>
-
+    <!-- <footer></footer> -->
     <script src="app.js" async defer></script>
   </body>
 </html>

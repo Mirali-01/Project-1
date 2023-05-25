@@ -1,36 +1,80 @@
-/* use vw */
-/* use media queries */
 *{
     margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    display: block;
 }
 
 body {
     background-image: url("https://img.freepik.com/free-photo/green-dirty-blackboard_125540-774.jpg?size=626&ext=jpg&ga=GA1.1.472614986.1675387209&semt=ais");
     background-size: cover;
     background-position: center;
-    /* background-color: black; */ 
+    display: flex;
+    flex-direction: column;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-color: black; */ 
+}
+
+.toggleDark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.4vh solid whitesmoke;
+    background-color: transparent;
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: black;
+    background-image: none;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.4vh solid whitesmoke;
+    border-left: 0.4vh solid whitesmoke;
+    border-right: 0.4vh solid whitesmoke;
+    height: 8vh;
+    padding: 2vh;
+}
+
+.nav h1{
+    text-align: center;
+    font-size: 6vh;
+    color: whitesmoke;
+}
+
+.navElements{
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navElements:last-child{
+    gap: 1vh;
 }
 
 .gameContainer{
     /* border: solid yellow; */
-    height: 100vh;
-    width: 90vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.title {
-    /* border: ridge; */
-    height: 10vh;
-    width: 80vh;
-    margin: auto;
-    text-align: center;
-    font-size: 8vh;
-    color: whitesmoke;
-    text-decoration: underline;
-}
+        height: 95vh;
+        width: 90vh;
+        margin: auto; 
+        /* take margin off for mobile-view */
+        display: flex;
+        flex-direction: column;
+    }
 
 .topScreen {
     /* border: ridge purple; */
@@ -163,8 +207,7 @@ input {
 }
 
 .playAgainContainer {
-    /* border: ridge white; */
-    height: 10vh;
+    /* border: ridge black; */
     width: 60vh;
     margin: auto;
     display: flex;
@@ -199,3 +242,261 @@ input {
     background-color: cadetblue;
     color: whitesmoke;
 }
+
+footer{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 5vh;
+}
+
+/* ////////////////////// */
+#myBtn{
+    border: solid whitesmoke 0.4vh;
+    height: 6vh;
+    width: 6vh;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: cadetblue;
+    padding: 20px;
+    border: 1px solid #888;
+    margin: auto;
+    width: 50%;
+    color: whitesmoke;
+    line-height: normal;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* /////////////////////// */
+
+  /* The side navigation menu */
+  .wrapper .sidebar{
+    border-right: 0.4vh solid whitesmoke;
+    border-left: 0.5vh solid whitesmoke;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 300px;
+    height: 89vh;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid gray;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: whitesmoke;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: cadetblue;
+    background: whitesmoke;
+    border-right: 2px solid cadetblue;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: cadetblue;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.wrapper .section .top_navbar{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+}
+
+body.active .wrapper .sidebar{
+    left: -303px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+
+
+/* ********************************************** */
+/* This kinda works */
+/* saves all relative units */
+/* @media (orientation: landscape) {
+    .gameContainer{
+        height: 100vw;
+        width: 90vw;
+    }
+    
+    .title {
+        height: 10vw;
+        width: 80vw;
+        font-size: 8vw;
+    }
+    
+    .topScreen {
+        height: 45vw;
+        width: 80vw;
+        gap: 0.5vw;
+    }
+    
+    .stickFigureBox {
+        border: 0.4vw solid whitesmoke;
+        height: 45vw;
+        width: 39vw;
+        gap: 0.5vw;
+    }
+    
+    .hangPiece {
+        height: 6.75vw;
+        width: 38vw;
+        font-size: 3.5vw;
+    }
+    
+    .alphabet {
+        border: 0.4vw solid whitesmoke;
+        height: 45vw;
+        width: 39vw;
+        gap: 1vw;
+    }
+    
+    .letter {
+        border: 0.5vw solid gainsboro;
+        height: 6vw;
+        width: 6vw;
+        font-size: 2.35vw;
+    }
+    
+    .midScreen {
+        height: 8vw;
+        width: 80vw;
+    }
+    
+    .yourWord{
+        height: 8vw;
+        width: 55vw;
+    }
+    
+    input {
+        border: 0.4vw solid gainsboro;
+        height: 7vw;
+        width: 30vw;
+        border-radius: 2vw;
+        font-size: 3.5vw;
+    }
+    
+    .submitWord, .randomWord {
+        border: 0.4vw solid gainsboro;
+        height: 8vw;
+        width: 20vw;
+        border-radius: 2vw;
+        font-size: 2.35vw;
+    }
+    
+    .bottomScreen {
+        border: 0.4vw solid whitesmoke;
+        height: 15vw;
+        width: 79.5vw;
+        font-size: 4vw;
+    }
+    
+    .blankSpaces {
+        height: 14.25vw;
+        width: 79.5vw;
+    }
+    
+    .space {
+        border-bottom: 0.4vw solid whitesmoke;
+        width: 4vw;
+    }
+    
+    .playAgainContainer {
+        height: 10vw;
+        width: 60vw;
+        gap: 10vw;
+    }
+    
+    .playAgain, .randomGuessWord, .guessWord {
+        border: 0.4vw solid lightgray;
+        font-size: 2.35vw;
+        height: 8vw;
+        width: 22vw;
+        border-radius: 3vw;
+    }
+} */
