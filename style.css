@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* background-color: black; */ 
 }
 
 .toggleDark{
@@ -276,8 +275,8 @@ footer{
   /* Modal Content */
   .modal-content {
     background-color: cadetblue;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 2vh;
+    border: 0.4vh solid #888;
     margin: auto;
     width: 50%;
     color: whitesmoke;
@@ -288,7 +287,7 @@ footer{
   .close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 3vw;
     font-weight: bold;
   }
   
@@ -306,90 +305,94 @@ footer{
     border-right: 0.4vh solid whitesmoke;
     border-left: 0.5vh solid whitesmoke;
     position: absolute;
-    top: 85px;
+    top: 12vh;
     left: 0;
-    width: 300px;
-    height: 89vh;
-    padding: 20px 0;
+    width: 42vh;
+    height: 92vh;
+    padding: 2vh;
+    text-align: center;
     transition: all 0.5s ease;
 }
 
-.wrapper .sidebar .profile{
-    margin-bottom: 30px;
-    text-align: center;
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 1vh;
 }
 
-.wrapper .sidebar .profile img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: auto;
+.profile img{
+    height: 30vh;
+    width: 30vh;
 }
 
-.wrapper .sidebar .profile h3{
-    color: #ffffff;
-    margin: 10px 0 5px;
+.profile h3{
+    color: blanchedalmond;
 }
 
-.wrapper .sidebar .profile p{
-    color: rgb(206, 240, 253);
-    font-size: 14px;
-}
-
-.wrapper .sidebar ul li a{
-    display: block;
-    padding: 13px 30px;
-    border-bottom: 1px solid gray;
-    color: rgb(241, 237, 237);
-    font-size: 16px;
-    position: relative;
-}
-
-.wrapper .sidebar ul li a .icon{
+.profile p{
     color: whitesmoke;
-    width: 30px;
-    display: inline-block;
 }
 
-.wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active{
-    color: cadetblue;
-    background: whitesmoke;
-    border-right: 2px solid cadetblue;
+.sidebar ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 1vh;
+    padding-inline: 1vh;
 }
 
-.wrapper .sidebar ul li a:hover .icon,
-.wrapper .sidebar ul li a.active .icon{
-    color: cadetblue;
+.sidebar ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid whitesmoke;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 1vh;
 }
 
-.wrapper .sidebar ul li a:hover:before,
-.wrapper .sidebar ul li a.active:before{
-    display: block;
+.sidebar ul li:first-child{
+    background-color: cadetblue;
+}
+
+.sidebar ul li:hover{
+    background: cadetblue;
+    cursor: pointer;
+}
+
+.sidebar ul li a{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    color: whitesmoke;
 }
 
 .wrapper .section .top_navbar{
-    height: 50px;
     display: flex;
-    align-items: center;
-    padding: 0 30px;
+    justify-content: center;
+    padding: 2vh;
 }
 
 .wrapper .section .top_navbar .hamburger a{
-    font-size: 28px;
+    font-size: 3vw;
     color: #f4fbff;
 }
 
 .wrapper .section .top_navbar .hamburger a:hover{
-    color: #a2ecff;
+    color: cadetblue;
 }
 
 body.active .wrapper .sidebar{
-    left: -303px;
+    left: -46.5vh;
 }
 
 body.active .wrapper .section{
-    margin-left: 0;
+    left: 0;
     width: 100%;
 }
 
