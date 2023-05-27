@@ -66,6 +66,7 @@ body {
 
 .gameContainer{
     /* border: solid yellow; */
+    padding: 2vh;
         height: 95vh;
         width: 90vh;
         margin: auto; 
@@ -301,12 +302,13 @@ footer{
 
   /* The side navigation menu */
  .sidebar{
-    margin-top: 1vh;
+    padding: 2vh;
+    margin-top: 1.25vh;
     border-right: 0.4vh solid whitesmoke;
     border-left: 0.5vh solid whitesmoke;
     position: absolute;
     left: 0;
-    width: 42vh;
+    /* width: 42vh; */
     height: 95vh;
     text-align: center;
     transition: all 0.5s ease;
@@ -396,7 +398,7 @@ footer{
 }
 
 body.active .wrapper .sidebar{
-    left: -46.5vh;
+    left: -45vh;
 }
 
 body.active .wrapper .section{
