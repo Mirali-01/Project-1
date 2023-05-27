@@ -8,7 +8,6 @@ img,
 svg,
 video {
     max-width: 100%;
-    display: block;
 }
 
 body {
@@ -26,8 +25,8 @@ body {
     align-items: center;
     border: 0.4vh solid whitesmoke;
     background-color: transparent;
-    height: 6vh;
-    width: 6vh;
+    height: 6.5vh;
+    width: 6.5vh;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -41,7 +40,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 0.4vh solid whitesmoke;
+    border-bottom: 0.5vh solid whitesmoke;
     border-left: 0.4vh solid whitesmoke;
     border-right: 0.4vh solid whitesmoke;
     height: 8vh;
@@ -50,7 +49,7 @@ body {
 
 .nav h1{
     text-align: center;
-    font-size: 6vh;
+    font-size: 5vw;
     color: whitesmoke;
 }
 
@@ -251,8 +250,8 @@ footer{
 /* ////////////////////// */
 #myBtn{
     border: solid whitesmoke 0.4vh;
-    height: 6vh;
-    width: 6vh;
+    height: 6.5vh;
+    width: 6.5vh;
     background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
@@ -301,15 +300,14 @@ footer{
   /* /////////////////////// */
 
   /* The side navigation menu */
-  .wrapper .sidebar{
+ .sidebar{
+    margin-top: 1vh;
     border-right: 0.4vh solid whitesmoke;
     border-left: 0.5vh solid whitesmoke;
     position: absolute;
-    top: 12vh;
     left: 0;
     width: 42vh;
-    height: 92vh;
-    padding: 2vh;
+    height: 95vh;
     text-align: center;
     transition: all 0.5s ease;
 }
@@ -319,6 +317,10 @@ footer{
     flex-direction: column;
     align-items: center;
     column-gap: 1vh;
+}
+
+.profile{
+    font-size: 2vw;
 }
 
 .profile img{
@@ -370,6 +372,12 @@ footer{
     flex-direction: column;
     gap: 1vh;
     color: whitesmoke;
+}
+
+.sidebar ul li a span{
+    height: 100%;
+    width: 100%;
+    font-size: 1.25vw;
 }
 
 .wrapper .section .top_navbar{
