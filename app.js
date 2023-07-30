@@ -3,8 +3,15 @@
 // fix text so that it supposed to appear after you win/lose for the random word function
 // Hints in Guess the Word! - give a random letter or first letter in the random word
 // Audio in the background
-// Songs on click or audio on click
 // Maybe a sign in, maybe???
+
+// audio on click
+// const clickAudio = new Audio();
+// clickAudio.src = "audio/click.mp3";
+// let click = document.getElementsByClassName("button")[0];
+// click[0].onclick = function () {
+//   clickAudio.play();
+// };
 
 // dark mode
 function myFunction() {
@@ -78,7 +85,6 @@ const alphabet = [
 ];
 
 const keyDown = (e) => {
-  e = window.event || e;
   key = e.keyCode;
   //space pressed
   if ((key >= 32 && key < 65) || key >= 91) {
